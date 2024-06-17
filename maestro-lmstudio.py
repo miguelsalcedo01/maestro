@@ -23,7 +23,7 @@ def opus_orchestrator(objective, file_content=None, previous_results=None, use_s
     previous_results_text = "\n".join(previous_results) if previous_results else "None"
     if file_content:
         console.print(Panel(f"File content:\n{file_content}", title="[bold blue]File Content[/bold blue]", title_align="left", border_style="blue"))
-    
+
     messages = [
         {
             "role": "system",
@@ -80,7 +80,7 @@ def haiku_sub_agent(prompt, search_query=None, previous_haiku_tasks=None, use_se
     qna_response = None
     if search_query and use_search:
         # Initialize the Tavily client
-        tavily = TavilyClient(api_key="YOUR API KEY HERE")
+        tavily = TavilyClient(api_key="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")
         # Perform a QnA search based on the search query
         qna_response = tavily.qna_search(query=search_query)
         console.print(f"QnA response: {qna_response}", style="yellow")
